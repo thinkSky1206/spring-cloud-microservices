@@ -42,6 +42,7 @@
         <module>auth</module>
         <module>gateway</module>
         <module>discovery</module>
+        <module>customer</module>
         <module>account</module>
     </modules>
 
