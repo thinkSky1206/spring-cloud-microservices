@@ -1,6 +1,18 @@
 server:
   port: 8761
+
+spring:
+  application:
+    name: discovery-server
+
+
+logging:
+  level:
+    org.springframework.cloud.netflix.eureka: TRACE
+
+
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
+

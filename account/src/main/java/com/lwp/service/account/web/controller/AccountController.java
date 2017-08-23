@@ -19,7 +19,7 @@ public class AccountController {
     @GetMapping("/{id}")
     public Account getAccount(@PathVariable String id) {
         Account account = new Account();
-        account.setId("1");
+        account.setId(id);
         account.setName("lwp");
         return account;
     }

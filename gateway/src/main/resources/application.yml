@@ -1,17 +1,23 @@
+server:
+  port: 8080
+
 spring:
   application:
     name: api-gateway
 
 
-server:
-  port: 8080
+logging:
+  level:
+    org.springframework.cloud.netflix.zuul: TRACE
 
 
 zuul:
   ignored-services: '*'
-  prefix: /api
+#  prefix: /api
   routes:
+   auth-server: /uaa/**
    account-service: /account/**
+  sensitive-headers:
 
 
 eureka:
