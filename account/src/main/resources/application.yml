@@ -9,14 +9,24 @@ logging:
   level:
     org.springframework.security: TRACE
 
+#security:
+#  user:
+#    name: root
+#    password: password
+#  oauth2:
+#    resource:
+#      loadBalanced: true
+#      userInfoUri: http://localhost:9999/user
 security:
+  sessions: stateless
   user:
-    name: root
-    password: password
+    password: none
+#token 公钥
   oauth2:
     resource:
-      loadBalanced: true
-      userInfoUri: http://localhost:9999/user
+      jwt:
+        key-value: 123
+
 
 eureka:
   client:

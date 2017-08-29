@@ -1,5 +1,6 @@
 server:
   port: 8080
+#  context-path: /app
 
 spring:
   application:
@@ -18,6 +19,19 @@ zuul:
    auth-server: /uaa/**
    account-service: /account/**
   sensitive-headers:
+
+security:
+ user:
+   password: none
+ oauth2:
+  client:
+    access-token-uri: http://localhost:8080/uaa/oauth/token
+    user-authorization-uri: http://localhost:8080/uaa/oauth/authorize
+    client-id: testc
+
+  resource:
+   jwt:
+     key-value: 123
 
 
 eureka:
