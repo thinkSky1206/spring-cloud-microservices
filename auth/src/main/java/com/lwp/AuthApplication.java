@@ -11,11 +11,19 @@ import org.springframework.web.bind.annotation.RestController;
 import java.security.Principal;
 
 @SpringBootApplication
-@EnableEurekaClient
+@RestController
+//@EnableEurekaClient
 public class AuthApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(AuthApplication.class, args);
     }
+
+
+
+        @RequestMapping("/hello")
+        private String hello() {
+            return "hello";
+        }
 
 }

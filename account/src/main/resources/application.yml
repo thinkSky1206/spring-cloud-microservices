@@ -17,18 +17,21 @@ logging:
 #    resource:
 #      loadBalanced: true
 #      userInfoUri: http://localhost:9999/user
-security:
-  sessions: stateless
-  user:
-    password: none
-#token 公钥
-  oauth2:
-    resource:
-      jwt:
-        key-value: 123
 
 
-eureka:
-  client:
-    service-url:
-     defaultZone: http://localhost:8761/eureka
+#token
+#security:
+#  sessions: stateless
+#  user:
+#    password: none
+##token 公钥
+#  oauth2:
+#    resource:
+#      jwt:
+#        key-value: 123
+
+
+#eureka:
+#  client:
+#    service-url:
+#     defaultZone: http://localhost:8761/eureka
