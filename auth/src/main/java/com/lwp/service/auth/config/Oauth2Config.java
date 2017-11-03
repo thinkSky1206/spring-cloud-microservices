@@ -58,6 +58,7 @@ public class Oauth2Config extends AuthorizationServerConfigurerAdapter {
         clients.inMemory()
                 .withClient("web")
                 .secret("webs")
+//                .autoApprove(true) //跳过确认授权页面
                 .authorizedGrantTypes("authorization_code", "refresh_token", "implicit", "password", "client_credentials")//允许授权类型
                 .scopes("web_app");//允许授权范围
     }

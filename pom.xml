@@ -9,6 +9,15 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>config</module>
+        <module>auth</module>
+        <module>gateway</module>
+        <module>discovery</module>
+        <module>customer</module>
+        <module>account</module>
+    </modules>
+
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -38,13 +47,7 @@
     </dependencyManagement>
 
 
-    <modules>
-        <module>auth</module>
-        <module>gateway</module>
-        <module>discovery</module>
-        <module>customer</module>
-        <module>account</module>
-    </modules>
+
 
 
 </project>
